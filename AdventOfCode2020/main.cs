@@ -12,6 +12,13 @@ using AdventOfCode2020.Assignments;
 
 namespace AdventOfCode2020
 {
+
+    class LogThrow : Exception
+    {
+        public LogThrow(string message) : base(message)
+        {
+        }
+    }
     static class Application
     {
         private static Dictionary<int, DayAssignment> assignments = new Dictionary<int, DayAssignment>();
@@ -28,7 +35,7 @@ namespace AdventOfCode2020
             while (true)
             {
 
-                int targetDay = 0;
+                int targetDay = 8;
 #if !DEVELOP
                 if (args.Length == 0)
                 {
@@ -58,6 +65,7 @@ namespace AdventOfCode2020
                 {
                 }
 
+
                 Console.WriteLine($"Day: {targetDay} \n\n");
 
                 Console.WriteLine("Assignment A: ");
@@ -78,9 +86,19 @@ namespace AdventOfCode2020
                 {
                     Console.WriteLine(assignments[targetDay].B());
                 }
-                catch (NotImplementedException _)
+                catch (NotImplementedException)
                 {
                     Console.WriteLine("Not Implemented");
+                }
+                catch (LogThrow e)
+                {
+                    Console.Clear();
+                    Console.Write(e.Message);
+
+                    Console.WriteLine("Press any key to return");
+                    Console.ReadKey();
+                    continue;
+
                 }
 
                 Console.WriteLine(""); Console.WriteLine("");

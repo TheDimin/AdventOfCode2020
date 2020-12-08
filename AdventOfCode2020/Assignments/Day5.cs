@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class DayFive : DayAssignment
+    class Day5 : DayAssignment
     {
         bool[,] seats = new bool[179, 8];
         public override int Day { get; } = 5;

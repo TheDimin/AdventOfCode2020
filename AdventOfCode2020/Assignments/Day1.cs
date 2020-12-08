@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class DayOne : DayAssignment
+    class Day1 : DayAssignment
     {
         private int[] numbers;
 

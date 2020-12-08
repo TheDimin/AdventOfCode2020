@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class DayThree : DayAssignment
+    class Day3 : DayAssignment
     {
         private char[,] map;
 
