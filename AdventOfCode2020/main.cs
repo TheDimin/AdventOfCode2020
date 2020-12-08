@@ -2,10 +2,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using AdventOfCode2020.Assignments;
 
 
@@ -56,21 +58,28 @@ namespace AdventOfCode2020
                 }
 #endif
                 Console.Clear();
+                Stopwatch timer = new Stopwatch();
+                TimeSpan InitTime;
+                TimeSpan ATime;
+                TimeSpan BTime;
 
                 try
                 {
+                    timer.Start();
                     assignments[targetDay].Init();
                 }
                 catch (NotImplementedException)
                 {
                 }
 
+                InitTime = timer.Elapsed;
 
                 Console.WriteLine($"Day: {targetDay} \n\n");
-
                 Console.WriteLine("Assignment A: ");
+
                 try
                 {
+                    timer.Restart();
                     Console.WriteLine(assignments[targetDay].A());
                 }
                 catch (NotImplementedException)
@@ -78,12 +87,15 @@ namespace AdventOfCode2020
                     Console.WriteLine("Not Implemented");
                 }
 
+                ATime = timer.Elapsed;
+
                 Console.WriteLine("");
                 Console.WriteLine("=========================");
                 Console.WriteLine("");
                 Console.WriteLine("Assignment B: ");
                 try
                 {
+                    timer.Restart();
                     Console.WriteLine(assignments[targetDay].B());
                 }
                 catch (NotImplementedException)
@@ -101,7 +113,17 @@ namespace AdventOfCode2020
 
                 }
 
-                Console.WriteLine(""); Console.WriteLine("");
+                BTime = timer.Elapsed;
+                timer.Stop();
+
+                Console.WriteLine("\n\n");
+
+                Console.WriteLine($"Init executionTime: {InitTime.TotalMilliseconds} MS");
+                Console.WriteLine($"A executionTime: {ATime.TotalMilliseconds} MS");
+                Console.WriteLine($"B executionTime: {BTime.TotalMilliseconds} MS");
+                Console.WriteLine($"Total executionTime: {(InitTime + ATime + BTime).TotalMilliseconds} MS");
+                Console.WriteLine("\n\n");
+
                 Console.WriteLine("Press any key to return");
                 Console.ReadKey();
                 Console.Clear();
