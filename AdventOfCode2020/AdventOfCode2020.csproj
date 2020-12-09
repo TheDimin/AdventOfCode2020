@@ -46,6 +46,7 @@
     <Compile Include="Assignments\Day3.cs" />
     <Compile Include="Assignments\Day2.cs" />
     <Compile Include="Assignments\Day1.cs" />
+    <Compile Include="Assignments\Day9.cs" />
     <Compile Include="DayAssignment.cs" />
     <Compile Include="main.cs" />
   </ItemGroup>
@@ -92,6 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="Data\Day8.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Data\Day9.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>

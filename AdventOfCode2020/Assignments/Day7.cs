@@ -16,7 +16,7 @@ namespace AdventOfCode2020.Assignments
         {
             Regex kpSplit = new Regex("s contain ");
             Regex rSplit = new Regex(", |\\.");
-
+            backtypes.Clear();
             var dic = new Dictionary<string, int>();
             foreach (var bagInfo in ReadLines())
             {

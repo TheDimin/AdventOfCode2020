@@ -13,7 +13,6 @@ namespace AdventOfCode2020.Assignments
         public override int Day { get; } = 6;
         public override void Init()
         {
-            throw new NotImplementedException();
         }
 
 

@@ -110,16 +110,16 @@ namespace AdventOfCode2020.Assignments
                         if (seats[r + 1, c] && seats[r - 1, c])
                         {
                             answer = (r ) * 8 + (c);
-                            Console.Write('?');
+                         //   Console.Write('?');
                             continue;
                         }
 
                     }
 
 
-                    Console.Write(seats[r, c] ? '#' : '.');
+                    //Console.Write(seats[r, c] ? '#' : '.');
                 }
-                Console.WriteLine();
+            //    Console.WriteLine();
             }
             return $"Our seatID is {answer}";
         }

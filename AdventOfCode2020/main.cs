@@ -37,7 +37,7 @@ namespace AdventOfCode2020
             while (true)
             {
 
-                int targetDay = 8;
+                int targetDay = 9;
 #if !DEVELOP
                 if (args.Length == 0)
                 {
@@ -47,9 +47,15 @@ namespace AdventOfCode2020
                     {
                         Console.Clear();
                         Console.Write("Load day: ");
-                        invalid = !int.TryParse(Console.ReadLine(), out targetDay);
+                        string line = Console.ReadLine();
+                        invalid = !int.TryParse(line, out targetDay);
                         if (!invalid)
                             invalid = !assignments.ContainsKey(targetDay);
+                        else if (line == "perf")
+                        {
+                            PerformancePrint();
+                        }
+
                     } while (invalid);
                 }
                 else
@@ -70,6 +76,7 @@ namespace AdventOfCode2020
                 }
                 catch (NotImplementedException)
                 {
+                    Console.WriteLine("Not Implemented");
                 }
 
                 InitTime = timer.Elapsed;
@@ -128,6 +135,71 @@ namespace AdventOfCode2020
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+
+        static void PerformancePrint()
+        {
+            Console.Clear();
+            Console.WriteLine("Starting Performance Run");
+            Stopwatch timer = new Stopwatch();
+            TimeSpan total = new TimeSpan();
+            foreach (var dayPair in assignments.OrderBy(t => t.Key))
+            {
+                TimeSpan assignmentTimeSpan = new TimeSpan();
+                DayAssignment assignment = dayPair.Value;
+
+                Console.WriteLine($"Day: {dayPair.Key}");
+                try
+                {
+                    timer.Restart();
+                    assignment.Init();
+
+                }
+                catch (NotImplementedException)
+                {
+                    Console.WriteLine("Not Implemented");
+                }
+                timer.Stop();
+                Console.WriteLine($"Init: {timer.Elapsed.TotalMilliseconds} MS");
+                assignmentTimeSpan += timer.Elapsed;
+
+                try
+                {
+                    timer.Restart();
+                    assignment.A();
+                }
+                catch (NotImplementedException)
+                {
+                    Console.WriteLine("Not Implemented");
+                }
+
+                timer.Stop();
+                Console.WriteLine($"A: {timer.Elapsed.TotalMilliseconds} MS");
+                assignmentTimeSpan += timer.Elapsed;
+                try
+                {
+                    timer.Restart();
+                    assignment.B();
+
+                }
+                catch (NotImplementedException)
+                {
+                    Console.WriteLine("Not Implemented");
+                }
+
+                timer.Stop();
+                Console.WriteLine($"B: {timer.Elapsed.TotalMilliseconds} MS");
+                assignmentTimeSpan += timer.Elapsed;
+
+                Console.WriteLine($"Total: {assignmentTimeSpan.TotalMilliseconds} MS");
+                total += assignmentTimeSpan;
+                Console.WriteLine("\n=======================\n\n");
+            }
+            Console.WriteLine($"Total Execution time {total.TotalMilliseconds} MS");
+
+            Console.WriteLine("Press any key to return");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }

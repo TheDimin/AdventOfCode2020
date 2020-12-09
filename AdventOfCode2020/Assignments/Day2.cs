@@ -17,7 +17,7 @@ namespace AdventOfCode2020.Assignments
         public override string A()
         {
             int validCounter = 0;
-            foreach (var line in ReadLines("DayTwo.txt"))
+            foreach (var line in ReadLines())
             {
                 string[] splitLine = line.Split(' ');
 
@@ -37,7 +37,7 @@ namespace AdventOfCode2020.Assignments
         public override string B()
         {
             int validCounter = 0;
-            foreach (var line in ReadLines("DayTwo.txt"))
+            foreach (var line in ReadLines())
             {
                 string[] splitLine = line.Split(' ');
 
@@ -49,7 +49,7 @@ namespace AdventOfCode2020.Assignments
                     continue;
                 }
 
-                Console.WriteLine($" chars A: {splitLine[2][int.Parse(countSplit[0]) - 1]} B: {splitLine[2][int.Parse(countSplit[1]) - 1]} TargetChar: {splitLine[1][0]} , Answers A: {splitLine[2][int.Parse(countSplit[0]) - 1] == splitLine[1][1]} B: {splitLine[2][int.Parse(countSplit[1]) - 1] == splitLine[1][1]}");
+               // Console.WriteLine($" chars A: {splitLine[2][int.Parse(countSplit[0]) - 1]} B: {splitLine[2][int.Parse(countSplit[1]) - 1]} TargetChar: {splitLine[1][0]} , Answers A: {splitLine[2][int.Parse(countSplit[0]) - 1] == splitLine[1][1]} B: {splitLine[2][int.Parse(countSplit[1]) - 1] == splitLine[1][1]}");
 
             }
 
