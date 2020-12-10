@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class Day4 : DayAssignment
+    class Day04 : DayAssignment
     {
         class ID
         {

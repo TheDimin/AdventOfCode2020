@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class Day2 : DayAssignment
+    class Day02 : DayAssignment
     {
         public override int Day { get; } = 2;
 

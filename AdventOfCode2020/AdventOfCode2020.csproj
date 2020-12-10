@@ -38,20 +38,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assignments\Day5.cs" />
-    <Compile Include="Assignments\Day4.cs" />
-    <Compile Include="Assignments\Day8.cs" />
-    <Compile Include="Assignments\Day7.cs" />
-    <Compile Include="Assignments\Day6.cs" />
-    <Compile Include="Assignments\Day3.cs" />
-    <Compile Include="Assignments\Day2.cs" />
-    <Compile Include="Assignments\Day1.cs" />
-    <Compile Include="Assignments\Day9.cs" />
+    <Compile Include="Assignments\Day05.cs" />
+    <Compile Include="Assignments\Day04.cs" />
+    <Compile Include="Assignments\Day08.cs" />
+    <Compile Include="Assignments\Day07.cs" />
+    <Compile Include="Assignments\Day06.cs" />
+    <Compile Include="Assignments\Day03.cs" />
+    <Compile Include="Assignments\Day02.cs" />
+    <Compile Include="Assignments\Day01.cs" />
+    <Compile Include="Assignments\Day10.cs" />
+    <Compile Include="Assignments\Day09.cs" />
     <Compile Include="DayAssignment.cs" />
     <Compile Include="main.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day1.txt">
+    <AdditionalFiles Include="Data\Day01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
@@ -62,42 +63,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day2.txt">
+    <AdditionalFiles Include="Data\Day02.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day3.txt">
+    <AdditionalFiles Include="Data\Day03.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day4.txt">
+    <AdditionalFiles Include="Data\Day04.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day5.txt">
+    <AdditionalFiles Include="Data\Day05.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day6.txt">
+    <AdditionalFiles Include="Data\Day06.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day7.txt">
+    <AdditionalFiles Include="Data\Day07.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day8.txt">
+    <AdditionalFiles Include="Data\Day08.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="Data\Day9.txt">
+    <AdditionalFiles Include="Data\Day09.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Data\Day10.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>

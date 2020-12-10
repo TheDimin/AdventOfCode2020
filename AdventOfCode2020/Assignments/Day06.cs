@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class Day6 : DayAssignment
+    class Day06 : DayAssignment
     {
         private Dictionary<char, int> answers = new Dictionary<char, int>();
         private int totalSum;

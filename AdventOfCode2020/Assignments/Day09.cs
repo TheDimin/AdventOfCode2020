@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class Day9 : DayAssignment
+    class Day09 : DayAssignment
     {
         public override int Day { get; } = 9;
         private const int preamble = 5;
@@ -58,7 +58,6 @@ namespace AdventOfCode2020.Assignments
 
         public override string B()
         {
-            List<long> sumNumbs = new List<long>(numbers.Count);
             for (int NumA = 0; NumA < invalidIndex - preamble; NumA++)
             {
                 for (int NumB = NumA; NumB < invalidIndex; NumB++)

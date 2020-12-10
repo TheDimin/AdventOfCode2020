@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Assignments
 {
-    class Day7 : DayAssignment
+    class Day07 : DayAssignment
     {
         Dictionary<string, Dictionary<string, int>> backtypes = new Dictionary<string, Dictionary<string, int>>();
 

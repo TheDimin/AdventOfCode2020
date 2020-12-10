@@ -1,4 +1,4 @@
-﻿//#define DEVELOP
+﻿#define DEVELOP
 
 using System;
 using System.Collections.Generic;
@@ -33,11 +33,11 @@ namespace AdventOfCode2020
                 var assignment = (DayAssignment)Activator.CreateInstance(type);
                 assignments.Add(assignment.Day, assignment);
             }
-
+            int targetDay = 10;
             while (true)
             {
 
-                int targetDay = 9;
+                
 #if !DEVELOP
                 if (args.Length == 0)
                 {
